@@ -26,11 +26,12 @@
 		ul { margin-top: 1em; }
 
 		.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-		nav { position:relative; clear:both; margin-bottom: 1em; }
+		nav { position:relative; clear:both; margin-bottom: .75em; }
 		nav ul { list-style: none; background: #333; margin: 0; }
 		nav ul li { float: left; position: relative; margin:0 .5em; }
-		nav ul li a { display: block; padding:.55em .55em; }
-		header nav { font-size: 120%; margin-top: .25em; }
+		nav > ul > li:first-child { margin-left: 0; }
+		nav ul li a { display: block; padding:.55em .55em; background: #eee; margin-bottom: .5em; }
+		header nav { font-size: 120%; margin-top: .75em; }
 
 		div.top { margin-bottom: 2em; }
 		div.bottom { }
@@ -49,7 +50,7 @@
 			<div class="g1">
 				<h1>Fortress Forever</h1>
 				<p>A free Team Fortress mod on the Source Engine</p>
-				<h3><a href="#">Download</a></h3>
+				<h3><a href="#" id="download">Download</a></h3>
 				<div class="embed-container" style="margin-bottom: 1.5em"><iframe src="http://www.youtube.com/embed/-0-6wdDyGLI" frameborder="0" allowfullscreen></iframe></div>
 			</div>
 			<div class="g2">
