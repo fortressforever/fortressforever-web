@@ -51,6 +51,7 @@
 				<h3>Level Designers</h3>
 
 				<ul>
+					<li>See the <a href="https://github.com/fortressforever/fortressforever-maps">fortressforever-maps repository</a></li>
 					<li>Browse the issues with the <a href="https://github.com/fortressforever/fortressforever/labels/mapping"><code>mapping</code> label</a> or contact us on <a href="http://forums.fortress-forever.com/">our forums</a> or on <a href="http://webchat.quakenet.org/?channels=fortressforever">IRC (#FortressForever on Quakenet)</a> to see how you can help</li>
 				</ul>
 				
