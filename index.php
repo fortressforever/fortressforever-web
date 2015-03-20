@@ -21,6 +21,7 @@ $DB = $config["site_db"];
 
 	<link href='http://fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
 	<link href="css/style.css" rel="stylesheet" />
+	<link rel="alternate" type="application/rss+xml" href="<?=GetLink("rss")?>" />
 </head>
 
 <body>
@@ -58,6 +59,10 @@ else
 						<li><a href="https://twitter.com/FortressForever" class="simple-icon-link"><img style="background-color: rgb(0,172,237);" class="simple-icon" src="images/twitter-32.png" />Twitter</a></li>
 						<li><a href="https://www.facebook.com/fortressforever" class="simple-icon-link"><img style="background-color: rgb(59,89,152);" class="simple-icon" src="images/facebook-32.png" />Facebook</a></li>
 						<li><a href="http://steamcommunity.com/groups/FortressForever" class="simple-icon-link"><img style="background-color: rgb(0,0,0);" class="simple-icon" src="images/steam-32.png" />Steam</a></li>
+						<li><a href="http://reddit.com/r/fortressforever" class="simple-icon-link"><img style="background-color: #72AEEB;" class="simple-icon" src="images/reddit-32.png" />Reddit</a></li>
+					</ul>
+					<ul class="pull-right">
+						<li><a href="<?=GetLink("rss")?>" class="simple-icon-link"><img style="background-color: rgb(255,131,0);" class="simple-icon" src="images/rss-32.png" />RSS</a></li>
 					</ul>
 				</nav>
 			</div>
