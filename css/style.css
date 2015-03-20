@@ -261,7 +261,7 @@ header h1 a:hover {text-decoration:none;}
 	text-align:center;
 }
 .header-half {width: auto; position:relative; float: none; height: auto; margin: 1%; padding: 1em 0em; }
-.billboard { background-image: url("http://www.fortress-forever.com/bg_slashes.gif"); background-color: #86929C; color: #fff; }
+.billboard { background-image: url("../images/bg_slashes.gif"); background-color: #86929C; color: #fff; }
 .billboard a { color: #CDD7DD; }
 .billboard .highlight { background-color: rgba(0,0,0,.1); padding:.05em .25em;  }
 .billboard.padded { padding-top: 2.5em; padding-bottom: 1.5em; }

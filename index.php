@@ -8,7 +8,7 @@ $DB = $config["site_db"];
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Fortress Forever</title>
+	<title>Fortress Forever - A Source Mod inspired by Team Fortress</title>
 	<base href="<?=FF_HOST?>/" />
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
