@@ -22,8 +22,10 @@ $news_content = str_replace("\n", "<br />", $news_content);
 						<p>Join the fray in this <span class="highlight">high-speed, team-based FPS</span> with classes that range from pure movement to pure firepower (and everything in between).</p>
 						<a href="<?=GetLink("about")?>" class="more-info highlight">More info →</a>
 						<div class="class-lineup">
-							<h3 id="download-btn"><a class="z-depth-2" href="<?=GetLink("download")?>" id="download">Download</a></h3>
-							<span><small>Windows only, requires <a href="http://steampowered.com">Steam</a></small></span>
+							<h3 class="z-depth-2" style="background: rgba(0,0,0,0.5);">Coming to Steam March 27th</h3>
+							<span><small>Can't wait? <a href="<?=GetForumLink("showthread.php?t=24509")?>">Join the closed beta</a> or <a href="<?=GetLink("download")?>">manually install the pre-Greenlight version</a></small></span>
+							<!--<h3 id="download-btn"><a class="z-depth-2" href="<?=GetLink("download")?>" id="download">Download</a></h3>
+							<span><small>Windows only, requires <a href="http://steampowered.com">Steam</a></small></span>-->
 						</div>
 					</div>
 				</div>
