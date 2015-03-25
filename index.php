@@ -59,6 +59,7 @@ else
 						<li><a href="https://twitter.com/FortressForever" class="simple-icon-link"><img style="background-color: rgb(0,172,237);" class="simple-icon" src="images/twitter-32.png" />Twitter</a></li>
 						<li><a href="https://www.facebook.com/fortressforever" class="simple-icon-link"><img style="background-color: rgb(59,89,152);" class="simple-icon" src="images/facebook-32.png" />Facebook</a></li>
 						<li><a href="http://steamcommunity.com/groups/FortressForever" class="simple-icon-link"><img style="background-color: rgb(0,0,0);" class="simple-icon" src="images/steam-32.png" />Steam</a></li>
+						<li><a href="http://www.moddb.com/mods/fortress-forever" class="simple-icon-link"><img style="background-color: rgb(186,0,0);" class="simple-icon" src="images/moddb-32.png" />ModDB</a></li>
 						<li><a href="http://reddit.com/r/fortressforever" class="simple-icon-link"><img style="background-color: #72AEEB;" class="simple-icon" src="images/reddit-32.png" />Reddit</a></li>
 					</ul>
 					<ul class="pull-right">
