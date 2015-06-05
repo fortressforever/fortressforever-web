@@ -357,6 +357,47 @@ ul.developer-list { list-style: none; }
 .simple-icon-link img { margin-right: 0.5em; opacity: 0.75; margin-left: -0.25em; }
 .simple-icon-link:hover img { opacity: 1; }
 
+#bgvid {
+	position: absolute;
+	width: 100%;
+	top: -9%;
+	z-index: 10;
+	left: 0;
+}
+.embed-container {
+	overflow: hidden;
+}
+.video-loop-overlay {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	min-height: 100%;
+	min-width: 100%;
+	height: 100%;
+	background-image: url('../images/grid2.png');
+	overflow: hidden;
+	z-index: 11;
+	cursor: pointer;
+}
+.video-loop-overlay:hover .ytp-large-play-button-svg {
+	fill: #cc181e;
+}
+.video-play-button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 12;
+	width: 85px;
+	height: 60px;
+	margin-left: -42px;
+	margin-top: -30px;
+	cursor: pointer;
+	outline: 0;
+}
+.video-play-button .ytp-large-play-button-svg {
+	opacity: .9;
+}
+
 @media not print { 
 	.z-depth-1 {
 	z-index: 100;
