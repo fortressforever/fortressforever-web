@@ -20,7 +20,7 @@ RewriteRule ^jobs/?$ /contribute [R=302,L]
 RewriteRule ^devteam/?$ /about [R=302,L]
 
 # Temporary redirects
-RewriteRule ^download/?$ "http\:\/\/www\.fortress\-forever\.com\/wiki\/\?title\=Downloads" [R=302,L]
+RewriteRule ^download/?$ "http://store.steampowered.com/app/253530" [R=302,L]
 
 # Forum/wiki redirects
 RewriteCond %{HTTP_HOST} ^.*$
