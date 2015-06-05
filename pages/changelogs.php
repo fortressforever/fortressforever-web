@@ -6,7 +6,7 @@ if (isset($parameters[0]) && $parameters[0] !== "")
 }
 else
 {
-	$patch = "2.46";
+	$patch = "2.5.0";
 }
 ?>
 
@@ -14,6 +14,20 @@ else
 		<div class="page-margined">
 			<div class="g3">
 				<h2>Patch Notes</h2>
+				<nav class="cf">
+					<ul>
+<?php
+$post_greenlight_patches = array("2.5.0");
+foreach ($post_greenlight_patches as $post_greenlight_patch)
+{
+	$link_classes = $patch === $post_greenlight_patch ? "current-page" : "";
+?>
+						<li><a class="<?=$link_classes?>" href="<?=GetLink("changelogs/$post_greenlight_patch")?>"><?=$post_greenlight_patch?></a></li>
+<?php
+}
+?>
+					</ul>
+				</nav>
 				<h4>Pre-Greenlight</h4>
 				<nav class="cf">
 					<ul>
@@ -38,6 +52,245 @@ foreach ($pre_greenlight_patches as $pre_greenlight_patch)
 			<div class="g3">
 
 <?
+if ($patch == "2.5.0") {
+?>
+<div class="c_table">
+	<h3 class="no-margin">Patch 2.5.0</h3>
+	<div class="t_subheader">Released March 27, 2015</div>
+	<div class="t_body">
+
+		<div class="s_paragraph">
+			<h4>Features</h4>
+			<div class="s_body">
+				<ul class="task-list">
+				<li>Added different kill icons for unbounced rails, single bounced rails, and double bounced rails</li>
+				<li>Added airshot detection
+
+				<ul class="task-list">
+				<li>Airshots show in the console like so: player killed player with weapon (airshot)</li>
+				<li>Airshots are logged to file like so: "player" killed "player" with "weapon" (modifier "airshot")
+
+				<ul class="task-list">
+				<li>The (modifier "") string only gets added if there actually was an airshot, otherwise the entire parenthetical is absent from the line</li>
+				</ul>
+				</li>
+				</ul>
+				</li>
+				<li>Added sparks/dust to the feet of rampsliders (cl_rampslidefx cvar for toggling the effects on/off, and cl_rampslidefx_* cvars for controlling how it looks/behaves)</li>
+				<li>Added team-colored trail to flags (cl_flagtrails cvar for toggling it on/off)</li>
+				<li>Allowed bounced rails to collide with their shooter</li>
+				<li>Added hud_weaponselect cvar (briefly shows the weapon select menu whenever switching weapons when hud_fastswitch is enabled; defaulted to enabled)</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="s_paragraph">
+			<h4>Gameplay</h4>
+			<div class="s_body">
+				<ul class="task-list">
+				<li>Lowered the hard cap from 180% to 171%</li>
+				<li>Flag touch bounds have been decreased somewhat significantly: touch height is now ~65% of flag height, and touch width is now ~100% of flag width (flag touch bounds used to be larger than the flag itself in both dimensions)</li>
+				<li>Added a middle bhop cap - when you are over it, reduce speed by more. Currently set to 1.55 speed (620 for scout) and it has a lower pcfactor (0.3 rather than 0.65). This means downtrimping is good for one jump and reduces successive conc skim jumps without reducing the hard cap too much</li>
+				<li>Made HH explosive grenades (frag/mirv) work like they do in TFC (HHing a gren now simply adds 1000 speed in the direction that you're currently moving (or 950 speed straight up if you're not moving at all)</li>
+				<li>Capped jump pad + conc horiz and vert speed separately</li>
+				<li>Set jump pad horiz boost to 768 (was 1024 in 2.46)</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="s_paragraph">
+			<h4>Classes</h4>
+			<div class="s_body">
+				<ul class="task-list">
+				<li>Removed the single shotgun from the hwguy, medic, and pyro (see <a href="https://github.com/fortressforever/fortressforever/issues/82" class="issue-link" title="Get rid of single shotgun on as many classes as possible">#82</a>)</li>
+				<li>Removed nailgun from sniper</li>
+				<li>Made the sniper rifle use nails to avoid shared ammo between sniper rifle/autorifle</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="s_paragraph">
+			<h4>Maps</h4>
+			<div class="s_body">
+				<ul class="task-list">
+				<li>Slimmed down the number of maps included with FF</li>
+				<li>Improved base_shutdown.lua
+
+				<ul class="task-list">
+				<li>Added built-in support for trigger-based buttons (blue_security_trigger/red_security_trigger)</li>
+				<li>Added built-in support for Lua-defined security shutdown length (SECURITY_LENGTH)</li>
+				<li>Added built-in support for turning on/off lights, brushes, trigger_ff_clips, and trigger_hurts</li>
+				<li>Added some helpful team-oriented trigger definitions in base_teamplay.lua</li>
+				</ul>
+				</li>
+				<li>Added a timer on the HUD that reflects how long security is down for on all security maps</li>
+				<li>Reverted all IvD maps that used the time-limited-round-based system to the default IvD system (only switch teams after all caps have been captured)</li>
+				<li>Removed the objective icon on the flag for defenders in IvD/AvD maps (it always points to the cap point that needs to be defended instead)</li>
+				<li>Changed the team names in ff_dm to something more appropriate</li>
+				<li>Removed the map guide menu as it has never been utilized</li>
+				<li>Allowed the speedometer to show while spectating someone</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="s_paragraph">
+			<h4>Misc</h4>
+			<div class="s_body">
+				<ul class="task-list">
+				<li>Added Spanish translation by VMX and Firefox11</li>
+				<li>Added (incomplete) Russian localization by Gordon</li>
+				<li>Added Portuguese (BR) translation by Gemini Saga</li>
+				<li>Defaulted hud_fastswitch to 1</li>
+				<li>Made 0 prematch the default when using ff_restartround without a parameter (ff_setprematch is better for cases where you just want to add prematch)</li>
+				<li>Added hud_fastswitch and hud_weaponselect to the Fortress Options "HUD" section</li>
+				<li>Reverted back to the 2.4 menu background because it was pretty cool</li>
+				<li>Removed the map guide menu and make the Flythrough button go directly to the flythrough</li>
+				<li>Improved HUD font: add Latin-1 Supplement and other missing chars (adds things like custom accented chars, #, &amp;, $, ~, etc)</li>
+				<li>Optimised Lua HUD network messages (send a number ID over the network rather than a string)</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="s_paragraph">
+			<h4>Fixes</h4>
+			<div class="s_body">
+				<ul class="task-list">
+				<li>Fixed spectators not getting their kills/deaths/fortpoints reset on restart round</li>
+				<li>Fixed getting a frag added when using the 'spectate' console command (it used to be to compensate for the -1 frag from suiciding)</li>
+				<li>Fixed grenades disappearing after falling too far</li>
+				<li>Fixed flags getting stuck in ceilings</li>
+				<li>Fixed ff_training not showing map loading info when launched from the main menu</li>
+				<li>Fixed ff_restartround resetting twice when called with 0 prematch time</li>
+				<li>Fixed unicode character support in VGUI/HUD elements</li>
+				<li>Fixed materials/ff/ff08_sign_up_green material using the yellow texture instead of the green one</li>
+				<li>Fixed the glass material in ff_dm</li>
+				<li>Fixed conc speed being limited for too long after using a jump pad (<a href="https://github.com/fortressforever/fortressforever/issues/80" class="issue-link" title="Jump pad + conc speed limiting persists for way too long">#80</a>)</li>
+				<li>Fixed Lua HUD timers' seconds getting truncated in the wrong direction when counting down</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="s_paragraph">
+			<h4>Lua</h4>
+			<div class="s_body">
+				<h5>Environment</h5>
+
+				<ul class="task-list">
+				<li>Exposed all safe default Lua library functions (newly exposed packages: package, debug, os)</li>
+				<li>Added lua_dostring server command that will attempt to run the given string in the global Lua environment</li>
+				<li>Made Lua's 'print' function redirect to the console</li>
+				<li>Made Lua's 'require' look in ModDir/maps/includes, ModDir/maps/ and ModDir/ when resolving modules</li>
+				<li>Converted IncludeScript into an alias of require</li>
+				<li>Removed arbitrary restriction on loading script files after the initial load sequence</li>
+				<li>Added tostring support for CBaseEntity, CFFPlayer, CTeam, and Color userdata</li>
+				<li>Removed luabind's 'class' implementation because it seems to be broken</li>
+				<li>Added Luabind's class_info function (see <a href="http://halmd.org/develop/luabind.html#debugging-c-types-with-class-info">http://halmd.org/develop/luabind.html#debugging-c-types-with-class-info</a>)</li>
+				</ul>
+
+				<h5>Fixes</h5>
+
+				<ul class="task-list">
+				<li>Fixed execution errors not being caught and failing silently</li>
+				<li>Fixed AT.kForceThrowItems and AT.kForceDropItems not doing what they say</li>
+				<li>Fixed entity:SetFriction() not working on players</li>
+				<li>Fixed typo in CF.kInfoScripts (was CF.kInfoScipts) (CF.kInfoScipts will remain for backwards compatibility)</li>
+				</ul>
+
+				<h5>Additions</h5>
+
+				<ul class="task-list">
+				<li>Added buildable_killed(buildable, damageinfo) callback</li>
+				<li>Added player_onuse(player) callback</li>
+				<li>Added support for separate collision and touch bounds for info_ff_scripts. The sizes are now controlled by Lua functions:
+
+				<ul class="task-list">
+				<li>entity_name:gettouchsizes( mins, maxs ) passes min and max vectors by reference for the function to alter in place</li>
+				<li>entity_name:getphysicssizes( mins, maxs ) passes min and max vectors by reference for the function to alter in place</li>
+				<li>entity_name:getbloatsize() expects a float return value, uses the value to inflate the touch bounding box (default bloat is 12)</li>
+				</ul>
+				</li>
+				<li>Added Lua-spawned trails on entities, coloured by team
+
+				<ul class="task-list">
+				<li>Functions added:
+
+				<ul class="task-list">
+				<li>entity:StartTrail(int teamid)</li>
+				<li>entity:StartTrail(int teamid, float start_width, float end_width, float lifetime)</li>
+				<li>entity:StopTrail()</li>
+				</ul>
+				</li>
+				</ul>
+				</li>
+				<li>Added global function GetGameDescription</li>
+				<li>Added player functions GetFortPoints, GetFrags, GetDeaths</li>
+				<li>Added player:SetDisguise(int teamId, int classId, bool isInstant)</li>
+				<li>Added player:IsInAir(unitsAboveGround) overload (checks if the player is the specified number of units above the ground)</li>
+				<li>Added player:IsFlashlightOn()</li>
+				<li>Added player:ResetDisguise()</li>
+				<li>Added player:AddHealth(healAmount, allowOverheal) overload</li>
+				<li>Renamed DisplayMessage to SendHintToPlayer and add SendHintToTeam/SendHintToAll functions</li>
+				<li>Added global function GetEntitiesByName(entname) that returns a Lua table containing the matching entities</li>
+				<li>Added global GetPlayers function (returns a table (array) of all players on the server)</li>
+				<li>Added IsJumpPad/CastToJumpPad</li>
+				<li>Added IsEntity</li>
+				<li>Added player functions to get the player's buildables (or nil if they're not built):
+
+				<ul class="task-list">
+				<li>player:GetSentryGun()</li>
+				<li>player:GetDispenser()</li>
+				<li>player:GetDetpack()</li>
+				<li>player:GetJumpPad()</li>
+				</ul>
+				</li>
+				<li>Majorly improved Lua's ability to interact with sentryguns
+
+				<ul class="task-list">
+				<li>sg:SetLevel(int level) // sets the level (does not play upgrade sounds)</li>
+				<li>sg:Upgrade() // upgrades to the next level</li>
+				<li>sg:Repair(int cells) // adds health based on the number of cells</li>
+				<li>sg:AddAmmo(int shells, int rockets) // adds ammo</li>
+				<li>sg:RocketPosition() // returns the Vector position of where rockets are fired from</li>
+				<li>sg:MuzzlePosition() // returns the Vector position of where bullets are fired from</li>
+				<li>sg:GetRockets() // number of rockets the SG has</li>
+				<li>sg:GetShells() // number of shells the SG has</li>
+				<li>sg:GetHealth() // amount of health the SG has</li>
+				<li>sg:SetRockets(int rockets)</li>
+				<li>sg:SetShells(int shells)</li>
+				<li>sg:SetHealth(int health)</li>
+				<li>sg:GetMaxRockets()</li>
+				<li>sg:GetMaxShells()</li>
+				<li>sg:GetMaxHealth()</li>
+				<li>sg:SetFocusPoint(Vector point) // sets where the SG wants to look</li>
+				<li>sg:GetEnemy() // gets the target of the SG (CBaseEntity)</li>
+				<li>sg:SetEnemy(CBaseEntity enemy)</li>
+				<li>sg:GetVecAiming() // gets the direction vector of the SG's current aim direction</li>
+				<li>sg:GetVecGoal() // gets the direction vector of the SG's goal aim direction</li>
+				<li>sg:Shoot() // makes the SG shoot one shell</li>
+				<li>sg:ShootRocket() // makes the SG shoot one rocket</li>
+				</ul>
+				</li>
+				<li>Added IsProjectile/CastToProjectile functions</li>
+				<li>Added IsInfoScript function</li>
+				<li>Added IsBuildable/CastToBuildable functions</li>
+				<li>Added function GetEntitiesInSphere(Vector center, float radius, bool ignore_walls)</li>
+				<li>Added collection filter flag CF.kJumpPad</li>
+				<li>Exposed gEntList as the global variable GlobalEntityList
+
+				<ul class="task-list">
+				<li>Usage:
+
+				<ul class="task-list">
+				<li>GlobalEntityList:FirstEntity() // get the first CBaseEntity in the GlobalEntityList</li>
+				<li>GlobalEntityList:NextEntity(CBaseEntity current_entity) // get the next CBaseEntity in the list, after current_entity</li>
+				<li>GlobalEntityList:NumEntities() // get the total number of entities</li>
+				<li>Iteratable with both pairs and ipairs (for ent_id, entity in ipairs(GlobalEntityList) do print(ent_id, entity) end). The iteration order is arbitrary with both functions</li>
+			</div>
+		</div>
+	</div>
+</div>
+<?
+}
 if ($patch == "2.46") {
 ?>
 <div class="c_table">

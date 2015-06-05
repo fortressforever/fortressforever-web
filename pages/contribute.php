@@ -44,7 +44,7 @@
 				<h3>Modelers/Animators</h3>
 
 				<ul>
-					<li>See the <a href="https://github.com/fortressforever/fortressforever-models">fortressforever-models repository</a></li>
+					<li>See the <a href="https://github.com/fortressforever/fortressforever-models">fortressforever-models repository</a> (coming soon)</li>
 					<li>Browse the issues with the <a href="https://github.com/fortressforever/fortressforever/labels/modeling"><code>modeling</code></a> and/or <a href="https://github.com/fortressforever/fortressforever/labels/animation"><code>animation</code></a> labels</li>
 				</ul>
 

@@ -64,6 +64,11 @@ foreach ($random_media as $media)
 			</div>
 			<div class="g1">
 				<h3>Patch Notes</h3>
+				<nav class="cf">
+					<ul>
+						<li><a href="<?=GetLink("changelogs/2.5.0")?>">2.5.0</a></li>
+					</ul>
+				</nav>
 				<h4>Pre-Greenlight</h4>
 				<nav class="cf">
 					<ul>
