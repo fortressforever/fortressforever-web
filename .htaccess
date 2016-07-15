@@ -10,7 +10,7 @@ RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
 # Misc
-RewriteRule ^rss/$ /rss.php [L]
+RewriteRule ^rss/?$ /rss.php [L]
 
 # Legacy redirects
 RewriteRule ^info/?$ /about [R=302,L]
