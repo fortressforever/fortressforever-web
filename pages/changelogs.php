@@ -6,7 +6,7 @@ if (isset($parameters[0]) && $parameters[0] !== "")
 }
 else
 {
-	$patch = "2.5.0";
+	$patch = "2.6.0";
 }
 ?>
 
@@ -17,7 +17,7 @@ else
 				<nav class="cf">
 					<ul>
 <?php
-$post_greenlight_patches = array("2.5.0");
+$post_greenlight_patches = array("2.6.0", "2.5.2", "2.5.1", "2.5.0");
 foreach ($post_greenlight_patches as $post_greenlight_patch)
 {
 	$link_classes = $patch === $post_greenlight_patch ? "current-page" : "";
@@ -52,6 +52,172 @@ foreach ($pre_greenlight_patches as $pre_greenlight_patch)
 			<div class="g3">
 
 <?
+if ($patch == "2.6.0") {
+?>
+<div class="c_table">
+	<h3 class="no-margin">Patch 2.6.0</h3>
+	<div class="t_subheader">Released June 5, 2016</div>
+	<div class="t_body">
+
+		<div class="s_paragraph">
+			<h4>Classes</h4>
+			<div class="s_body">
+				<ul class="task-list">
+				<li><b>Scout</b>
+				<ul>
+					<li>Added new weapon: Jumpgun
+					<ul>
+						<li>When fully charged it can be fired to produce an upwards thrust like a mid-air powerful jump</li>
+						<li>Whilst the weapon is out, it'll charge up; switching weapons loses charge</li>
+						<li>We don't have a weapons modeller at the moment, so it's using the railgun model for now. If you'd like to model us a new gun, please get in touch!</li>
+					</ul>
+					</li>
+				</ul>
+				</li>
+				<li><b>Engineer</b>
+				<ul>
+					<li>Dispenser
+					<ul>
+						<li>Wrenching a dispenser now recharges 5 cells per whack; you can no longer insert your own ammo with your wrench</li>
+						<li>Dispensers are now cheaper, down from 100 cells to 30 cells</li>
+						<li>Dispensers have less maximum capacity, down from: 400 to 100 cells; 500 to 100 nails; 400 to 100 shells, 250 to 50 rockets, 500 to 100 armor. NOTE: It's explosion size is based on what percentage full it is, not the total ammo number. This means the explosion size has not changed, but it reaches full detonation size quicker.</li>
+						<li>Dispenser health reduced from 150 to 75</li>
+						<li>Dispensers no longer eat backpacks when they are full</li>
+					</ul>
+					</li>
+				</ul>
+				</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="s_paragraph">
+			<h4>Misc</h4>
+			<div class="s_body">
+				<ul class="task-list">
+				<li>Ragdolls are no longer affected by concussion grenades</li>
+				<li>Ragdolls are pushed less by explosions</li>
+				<li>Ragdolls last for 5 seconds, down from 15</li>
+				<li>Gibs are now more frequent from deaths with explosions (>30 dmg overkill rather than >50)</li>
+				<li>Dropped player weapons are now tied to cl_gib_lifetime</li>
+				<li>Railgun now glows more dramatically when it's fully charged</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="s_paragraph">
+			<h4>Bugfixes</h4>
+			<div class="s_body">
+				<ul class="task-list">
+				<li>Fixed various HUD positioning on non-standard resolutions</li>
+				<li>Fixed cl_spawnweapon_scout and cl_spawnweapon_spy</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</div>
+<?
+}
+if ($patch == "2.5.2") {
+?>
+<div class="c_table">
+	<h3 class="no-margin">Patch 2.5.2</h3>
+	<div class="t_subheader">Released October 3, 2015</div>
+	<div class="t_body">
+
+		<div class="s_paragraph">
+			<h4>General</h4>
+			<div class="s_body">
+				<ul class="task-list">
+				<li>Increase ff_monkey nade bag respawn time from 15 to 30 seconds</li>
+				<li>Rename single shotgun to pellet gun and make it sound weak</li>
+				<li>Re-add single shotgun (now pellet gun) to pyro</li>
+				<li>Fix the spanner special hit sound getting covered up by the clang sound</li>
+				<li>Add in-game on-screen keyboard functionality
+				<ul>
+					<li>Adds the cvars hud_keystate (disabled by default) and hud_keystate_spec (enabled by default)</li>
+					<li>When hud_keystate is enabled, your own keypresses will be drawn on the screen</li>
+					<li>When hud_keystate_spec is enabled, the keypresses of your target while spectating in first/third person will be drawn on the screen</li>
+				</ul>
+				</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</div>
+<?
+}
+if ($patch == "2.5.1") {
+?>
+<div class="c_table">
+	<h3 class="no-margin">Patch 2.5.1</h3>
+	<div class="t_subheader">Released June 13, 2015</div>
+	<div class="t_body">
+
+		<div class="s_paragraph">
+			<h4>General</h4>
+			<div class="s_body">
+				<ul class="task-list">
+				<li>Increase flag touch bounds a bit:
+				<ul>
+					<li>Height from 65% of model height to 80%</li>
+					<li>Width from 100% of model width to 150%</li>
+					<li>Stops a single SG from being able to completely block the flag, though you can still make it difficult to grab</li>
+					<li>Flag model bounds: 26.254800796509 x 69.179306283593</li>
+					<li>Flag bounds before this change: 26.254800796509 x 45.048884835839</li>
+					<li>Flag bounds after this change: 39.382202148438 x 55.155250549316</li>
+				</ul>
+				</li>
+				<li>Add documentation for "disguise last" functionality through the description of disguise command.</li>
+				<li>Enable hud_speedometer by default</li>
+				<li>Add basic armorstrip convar: mp_friendlyfire_armorstrip
+				<ul><li>From the cvar description: "If > 0, only deals armor damage to teammates. The armor damage is multiplied by the value of the cvar (mp_armorstrip 0.5 means half damage). Requires mp_friendlyfire 1"</li></ul>
+				</li>
+				<li>Disabling security now gives a player 50 fortress points and displays a HUD message to all</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="s_paragraph">
+			<h4>Bugfixes</h4>
+			<div class="s_body">
+				<ul class="task-list">
+					<li>Fix CFFPlayer noisy BodyTarget while crouched (should make explosions while crouched behave better)</li>
+					<li>Fix explosions doing too much damage to crouched players in certain cases</li>
+					<li>Fix explosions going through brushes when directly underneath them</li>
+					<li>Fix HH nades not doing damage to nearby players while standing still</li>
+					<li>Fix laser grenade beams getting drawn through walls</li>
+					<li>Fix players on ladders counting as airshots</li>
+					<li>Fix spy disguise weapon for classes that got weapons removed in 2.5.0</li>
+					<li>Dispenser cells required to build displayed correctly; now reads 100 instead of 30</li>
+					<li>Fix various HUD timers getting added with time + 1</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="s_paragraph">
+			<h4>Lua</h4>
+			<div class="s_body">
+				<ul class="task-list">
+				<li>Add global callbacks intermission() and restartround()
+					<ul>
+						<li>intermission() is called when intermission starts</li>
+						<li>restartround() is called right before the round is restarted, to allow for Lua to persist data before the Lua environment is destroyed and re-created</li>
+					</ul>
+				</li>
+				<li>Add get equivalents of exposed team set functions</li>
+				<li>Add global ServerCommand function (a map-agnostic alternative to the point_servercommand entity)</li>
+				<li>Add player:GetArmorAbsorption</li>
+				<li>Update func_button:ondamage lua callback to use parameters instead of global vars</li>
+			</div>
+		</div>
+
+	</div>
+</div>
+<?
+}
 if ($patch == "2.5.0") {
 ?>
 <div class="c_table">

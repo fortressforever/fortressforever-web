@@ -66,6 +66,9 @@ foreach ($random_media as $media)
 				<h3>Patch Notes</h3>
 				<nav class="cf">
 					<ul>
+						<li><a href="<?=GetLink("changelogs/2.6.0")?>">2.6.0</a></li>
+						<li><a href="<?=GetLink("changelogs/2.5.2")?>">2.5.2</a></li>
+						<li><a href="<?=GetLink("changelogs/2.5.1")?>">2.5.1</a></li>
 						<li><a href="<?=GetLink("changelogs/2.5.0")?>">2.5.0</a></li>
 					</ul>
 				</nav>
