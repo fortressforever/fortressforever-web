@@ -395,7 +395,7 @@ ul.developer-list { list-style: none; }
 	outline: 0;
 }
 .video-play-button .ytp-large-play-button-svg {
-	opacity: .9;
+	opacity: .65;
 }
 
 @media not print { 
