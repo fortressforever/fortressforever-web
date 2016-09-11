@@ -13,8 +13,6 @@
 
 				<ul>
 					<li>Report any bugs on <a href="https://github.com/fortressforever/fortressforever/issues">our issue tracker</a></li>
-					<li>Keep up to date with the <a href="http://forums.fortress-forever.com/showthread.php?t=24626">changes in the beta</a></li>
-					<li>Help test the beta by switching your branch to <code>beta</code> in Steam</li>
 				</ul>
 
 				<h3>Translators</h3>
