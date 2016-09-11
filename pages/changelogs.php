@@ -6,7 +6,7 @@ if (isset($parameters[0]) && $parameters[0] !== "")
 }
 else
 {
-	$patch = "2.7.0";
+	$patch = "2.7.x";
 }
 ?>
 
@@ -17,7 +17,7 @@ else
 				<nav class="cf">
 					<ul>
 <?php
-$post_greenlight_patches = array("2.7.0", "2.6.0", "2.5.2", "2.5.1", "2.5.0");
+$post_greenlight_patches = array("2.7.x", "2.6.0", "2.5.2", "2.5.1", "2.5.0");
 foreach ($post_greenlight_patches as $post_greenlight_patch)
 {
 	$link_classes = $patch === $post_greenlight_patch ? "current-page" : "";
@@ -52,7 +52,7 @@ foreach ($pre_greenlight_patches as $pre_greenlight_patch)
 			<div class="g3">
 
 <?
-if ($patch == "2.7.0") {
+if ($patch == "2.7.x") {
 ?>
 <div class="c_table">
 	<h3 class="no-margin">Patch 2.7.2</h3>
