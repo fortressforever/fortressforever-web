@@ -6,7 +6,7 @@ if (isset($parameters[0]) && $parameters[0] !== "")
 }
 else
 {
-	$patch = "2.6.0";
+	$patch = "2.7.0";
 }
 ?>
 
@@ -17,7 +17,7 @@ else
 				<nav class="cf">
 					<ul>
 <?php
-$post_greenlight_patches = array("2.6.0", "2.5.2", "2.5.1", "2.5.0");
+$post_greenlight_patches = array("2.7.0", "2.6.0", "2.5.2", "2.5.1", "2.5.0");
 foreach ($post_greenlight_patches as $post_greenlight_patch)
 {
 	$link_classes = $patch === $post_greenlight_patch ? "current-page" : "";
@@ -52,6 +52,158 @@ foreach ($pre_greenlight_patches as $pre_greenlight_patch)
 			<div class="g3">
 
 <?
+if ($patch == "2.7.0") {
+?>
+<div class="c_table">
+	<h3 class="no-margin">Patch 2.7.2</h3>
+	<div class="t_subheader">Released September 11, 2016</div>
+	<div class="t_body">
+		<ul class="task-list">
+			<li>Fixed kill assists not being logged to file</li>
+			<li>Fixed kill assists not timing out properly (you will now only get an assist if you do damage at most 5 seconds before the player dies)</li>
+			<li>Fixed not being able to swing crowbar when jetpacking</li>
+			<li>Fixed jetpacking flag not being reset on restartround/instant class switch</li>
+		</ul>
+	</div>
+
+	<h3 class="no-margin">Patch 2.7.1</h3>
+	<div class="t_subheader">Released September 11, 2016</div>
+	<div class="t_body">
+		<ul class="task-list">
+			<li>Fixed jetpack sound playing at loud volume sometimes</li>
+			<li>Fix divide by zero assert when concing sometimes</li>
+			<li>Add jetpack fuel bar to hud</li>
+			<li>Deathnotice fixes:<ul>
+				<li>Highlight when the local player is the assister</li>
+				<li>Fix assister not being drawn with their correct team color</li>
+				<li>Fade out assisters name slightly</li>
+			</ul></li>
+		</ul>
+	</div>
+
+	<h3 class="no-margin">Patch 2.7.0</h3>
+	<div class="t_subheader">Released September 10, 2016</div>
+	<div class="t_body">
+
+		<div class="s_paragraph">
+			<h4>Pyro Overhaul</h4>
+			<div class="s_body">
+				<ul class="task-list">
+					<li>Pyro now has a Jetpack - Hold attack2 to use.<ul><li>Also prevents 25% fall damage if used whilst hitting the floor</li>
+					</ul></li>
+					<li>Burn levels have been reworked.<ul><li>Afterburn damage-over-time has been removed.</li>
+					<li>Burn levels now increase damage from pyro weapons instead:<ul><li>Flamethrower (18 -&gt; 20 -&gt; 22)</li>
+					<li>Incendiary cannon (85 -&gt; 95 -&gt; 105)</li>
+					<li>Napalmlets (2 -&gt; 3 -&gt; 4)</li>
+					</ul></li>
+					<li>Burn levels no longer require different weapons:<ul><li>Flamethrower increases burn level every 5 hits</li>
+					<li>Napalm grenade increases burn level every 10 ticks</li>
+					<li>Incendiary cannon increases burn level every 1 hit (provided they are already on fire)</li>
+					</ul></li>
+					<li>The Incendiary cannon no longer sets players on fire - you must light them with a flamethrower or napalm grenade first.</li>
+					</ul></li>
+					<li>Flamethrower<ul><li>Flamethrower self-push has been removed</li>
+					<li>Flamethrower damage has been increased from 16 to 18</li>
+					<li>Flamethrower range has been increased by 10%</li>
+					</ul></li>
+					<li>Incendiary cannon<ul><li>Incendiary cannon base damage increased from 55 to 65</li>
+					<li>Incendiary cannon jumping now does less self-damage to the pyro</li>
+					<li>Incendiary cannon fire rate increased from 1.2sec -&gt; 0.6sec</li>
+					<li>Incendiary cannon now has a clip of 5</li>
+					</ul></li>
+					<li>Napalm grenades improvements<ul><li>Number of napalmlets increased from 8 to 9</li>
+					<li>Napalmlets are now more evenly spread over the area for more reliable area denial</li>
+					<li>Napalmlet burn height increased from 40 to 70 (it was previously possible to jump through a napalm field without getting hurt)</li>
+					<li>Napalmlets do damage more regularly now, so jumping through napalm will hurt you much more than before</li>
+					</ul></li>
+					<li>Pyro rocket stock raised from 20 to 25</li>
+
+					<li><b>Pyro class interactions:</b>
+						<ul><li>Scout, Medic and Spy extinguish their flames much faster than other classes</li>
+						<li>HW Overpressure extinguishes flames of himself and those around him</li>
+						<li>Pyro is still immune to being set on fire by other pyros.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="s_paragraph">
+			<h4>Gameplay Balance</h4>
+			<div class="s_body">
+				<ul class="task-list">
+					<li>Jumpgun has been removed from scout whilst it's design is reworked. Thanks for all your feedback on this!</li>
+					<li>All weapons now deploy faster. This means switching weapons is faster and more responsive.</li>
+					<li>MIRV initial explosion damage reduced from 180 to 145, this now matches normal grenades and mirvlets.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="s_paragraph">
+			<h4>Other Improvements</h4>
+			<div class="s_body">
+				<ul class="task-list">
+					<li>Kill Assists have been implemented.</li>
+					<li>Deathnotice self-highlighting has been improved and defaulted on.</li>
+					<li>Add new hints (Thanks NeoNL!)</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="s_paragraph">
+			<h4>Bug Fixes</h4>
+			<div class="s_body">
+				<ul class="task-list">
+					<li>Fixed projectiles blocking hitscan weapons<ul><li>Notably, nailguns against SGs and HWGuy will no longer block their bullets.</li>
+					<li>Flamethrowers will also now work against nailgunning players</li>
+					</ul></li>
+					<li>Fix local weapon sounds from playing twice on a high ping (e.g. deploy sound)</li>
+					<li>Fix weapon specific crosshairs for the AC/RPG/Tranq</li>
+					<li>Fixed the soldier 3rd-person RPG pose so it now points to where the rocket will travel. (Thanks WillWow_mc!)</li>
+					<li>Fixed flag trails performance issues<ul><li>Fixed stutter when the flag returns after it is capped</li>
+					<li>Added cvar cl_spritetrail_maxlength that controls the max length of a sprite trail (once exceeded, the trail will start over from its parent's current origin)</li>
+					<li>Made it so trails are not calculated at all client-side if they are disabled by their respective cvars</li>
+					</ul></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="s_paragraph">
+			<h4>Lua Improvements</h4>
+			<div class="s_body">
+				<ul class="task-list">
+					<li>Add basic support for spawning entities through Lua
+					<ul>
+						<li>Not very well tested, but is able to spawn info_ff_scripts like flags and have them work like normal</li>
+						<li>Added baseentity:SetName(string name)</li>
+						<li>Added global function SpawnEntity(string entity_class_name, string entity_name) that returns the entity spawned or nil if unsuccessful (example: `local entity = SpawnEntity("info_ff_script", "red_flag")`)</li>
+						<li>Added global function SpawnEntity(string entity_class_name) that returns the entity spawned or nil if unsuccessful (example: `local entity = SpawnEntity("info_ff_script")`)</li>
+					</ul>
+					</li>
+					<li>Add basic support for free-for-all teams<ul><li>Lua can set a team as a free-for-all team by doing `GetTeam(Team.kBlue):SetFFA(true)`</li>
+					</ul></li>
+					<li>Add Lua getters for various InfoFFScript settings<ul><li>infoscript:GetModel() returns the string path of the current model</li>
+					<li>infoscript:GetStartOrigin() returns the Vector that the infoscript will spawn at when returned</li>
+					<li>infoscript:GetStartAngles() returns the QAngles that the infoscript will spawn with when returned</li>
+					</ul></li>
+					<li>Improve Lua angle/vectors a bit<ul><li>Add player:GetEyeAngles()</li>
+					<li>Add __tostring() implementations for Vector and QAngle classes</li>
+					<li>Convert VectorAngles and AngleVectors to use Lua-style return values rather than C++ style pass-by-reference parameters. Example usage of the new functions:
+					<pre><code>
+local eye_angles = player:GetEyeAngles()
+local forward, right, up = AngleVectors(eye_angles)
+local angles = VectorAngles(forward)
+assert(angles == eye_angles)
+					</code></pre>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</div>
+<?
+}
 if ($patch == "2.6.0") {
 ?>
 <div class="c_table">
