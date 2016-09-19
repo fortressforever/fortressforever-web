@@ -55,11 +55,12 @@ foreach ($pre_greenlight_patches as $pre_greenlight_patch)
 if ($patch == "2.7.x") {
 ?>
 <div class="c_table">
-	<h3 class="no-margin">Patch 2.7.3</h3>
+	<h3 class="no-margin">Patch 2.7.3/2.7.4</h3>
 	<div class="t_subheader">Released September 18, 2016</div>
 	<div class="t_body">
 		<ul class="task-list">
 			<li>Fixed client crash when a player disconnects while jetpacking (thanks to LiTE for tracking it down and Fruitcake for letting me know about it)</li>
+			<li>Fixed client crash when a player disconnects while getting hit with bonus damage from the IC</li>
 		</ul>
 	</div>
 
