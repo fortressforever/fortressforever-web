@@ -40,7 +40,7 @@ $news_content = str_replace("\n", "<br />", $news_content);
 									<source src="media/ff_clips.mp4" type="video/mp4">
 								</video>
 							</div>
-							<iframe id="yt-video-embed" src="https://www.youtube.com/embed/-0-6wdDyGLI?list=PL5KX7r5FIS6ob8gqYTJzBUJV7c_j0dCm6&enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>
+							<iframe id="yt-video-embed" src="https://www.youtube.com/embed/A-V4u7LkP6Q?list=PL5KX7r5FIS6ob8gqYTJzBUJV7c_j0dCm6&enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>
 							<script>
 								var tag = document.createElement('script');
 
