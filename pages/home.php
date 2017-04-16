@@ -90,7 +90,7 @@ PrintActivityList($activity_list, false);
 				<div id="contribute">
 					<h3>Contribute</h3>
 					<a href="https://github.com/fortressforever" class="github-logo"><img src="images/github-64-black.png" /></a>
-					<p>Fortress Forever is <a class="highlight" href="https://github.com/fortressforever">open source</a> and developed by volunteers within the community. If you have the skill and desire to help move the project forward, you are more than welcome to contribute.</p><p>We are always looking for more <span class="highlight">programmers</span>, <span class="highlight">modelers/animators</span>, <span class="highlight">texture artists</span>, <span class="highlight">level designers</span>, and more</p>
+					<p>Fortress Forever is <a class="highlight" href="https://github.com/fortressforever">visible source</a> and developed by volunteers within the community. If you have the skill and desire to help move the project forward, you are more than welcome to contribute.</p><p>We are always looking for more <span class="highlight">programmers</span>, <span class="highlight">modelers/animators</span>, <span class="highlight">texture artists</span>, <span class="highlight">level designers</span>, and more</p>
 					<a href="<?=GetLink("contribute")?>">Learn how →</a>
 				</div>
 			</div>
