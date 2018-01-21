@@ -56,6 +56,7 @@ else
 					<ul>
 						<li><a href="https://github.com/fortressforever/" class="simple-icon-link"><img style="background-color: rgb(65,131,196);" class="simple-icon" src="images/github-32.png" />GitHub</a></li>
 						<li><a href="https://youtube.com/user/fortressforever/" class="simple-icon-link"><img style="background-color: rgb(205,51,45);" class="simple-icon" src="images/youtube-32.png" />YouTube</a></li>
+						<li><a href="https://discord.gg/jCphsAE" class="simple-icon-link"><img style="background-color: #7289DA;" class="simple-icon" src="images/discord-32.png" />Discord</a></li>
 						<li><a href="https://twitter.com/fortressforever/" class="simple-icon-link"><img style="background-color: rgb(0,172,237);" class="simple-icon" src="images/twitter-32.png" />Twitter</a></li>
 						<li><a href="https://facebook.com/fortressforever/" class="simple-icon-link"><img style="background-color: rgb(59,89,152);" class="simple-icon" src="images/facebook-32.png" />Facebook</a></li>
 						<li><a href="https://steamcommunity.com/groups/fortressforever/" class="simple-icon-link"><img style="background-color: rgb(0,0,0);" class="simple-icon" src="images/steam-32.png" />Steam</a></li>
