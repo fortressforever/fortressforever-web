@@ -55,6 +55,16 @@ foreach ($pre_greenlight_patches as $pre_greenlight_patch)
 if ($patch == "2.7.x") {
 ?>
 <div class="c_table">
+	<h3 class="no-margin">Patch 2.7.5</h3>
+	<div class="t_subheader">Released January 20, 2017</div>
+	<div class="t_body">
+		<ul class="task-list">
+			<li>Fixed Red + Blue1 -> Blue2 type teammate assists (visual only)</li>
+			<li>Fixed assists being blocked by teammates of the victim if the teammate did the most damage (now it looks for the top valid assister)</li>
+			<li>Set the spawn deploy delay back to the default of 0.5f (from 0.25f)</li>
+		</ul>
+	</div>
+
 	<h3 class="no-margin">Patch 2.7.3/2.7.4</h3>
 	<div class="t_subheader">Released September 18, 2016</div>
 	<div class="t_body">
