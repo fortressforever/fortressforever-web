@@ -56,7 +56,7 @@ if ($patch == "2.7.x") {
 ?>
 <div class="c_table">
 	<h3 class="no-margin">Patch 2.7.5</h3>
-	<div class="t_subheader">Released January 20, 2017</div>
+	<div class="t_subheader">Released January 20, 2018</div>
 	<div class="t_body">
 		<ul class="task-list">
 			<li>Fixed Red + Blue1 -> Blue2 type teammate assists (visual only)</li>
