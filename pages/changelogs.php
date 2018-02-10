@@ -55,6 +55,19 @@ foreach ($pre_greenlight_patches as $pre_greenlight_patch)
 if ($patch == "2.7.x") {
 ?>
 <div class="c_table">
+	<h3 class="no-margin">Patch 2.7.6</h3>
+	<div class="t_subheader">Released February 20, 2018</div>
+	<div class="t_body">
+		<ul class="task-list">
+			<li>Training is updated to explain pyro jetpack instead of hover flamethrower</li>
+			<li>Added discord rich presence! Shows basic stats about your team and status, can be disabled at any time with cl_discord 0.</li>
+			<li>Jetpack fuel is refilled on CTF flag captures</li>
+			<li>Jetpack fuel bar and crosshair hud bar is no longer jittery on high pings</li>
+			<li>Rampsliding on metal has a subtle grinding sound effect to match the sparks now</li>
+			<li>Non-existant 'sync_version' command from pre-steam days no longer fires on game joins</li>
+		</ul>
+	</div>
+
 	<h3 class="no-margin">Patch 2.7.5</h3>
 	<div class="t_subheader">Released January 20, 2018</div>
 	<div class="t_body">
@@ -445,7 +458,7 @@ if ($patch == "2.5.0") {
 				</ul>
 			</div>
 		</div>
-		
+
 		<div class="s_paragraph">
 			<h4>Maps</h4>
 			<div class="s_body">
@@ -469,7 +482,7 @@ if ($patch == "2.5.0") {
 				</ul>
 			</div>
 		</div>
-		
+
 		<div class="s_paragraph">
 			<h4>Misc</h4>
 			<div class="s_body">
@@ -487,7 +500,7 @@ if ($patch == "2.5.0") {
 				</ul>
 			</div>
 		</div>
-		
+
 		<div class="s_paragraph">
 			<h4>Fixes</h4>
 			<div class="s_body">
@@ -506,7 +519,7 @@ if ($patch == "2.5.0") {
 				</ul>
 			</div>
 		</div>
-		
+
 		<div class="s_paragraph">
 			<h4>Lua</h4>
 			<div class="s_body">
@@ -723,7 +736,7 @@ if ($patch == "2.46") {
 			</ul>
 			</div>
 		</div>
-		
+
 		<div class="s_paragraph">
 			<h4>Lua changes</h4>
 			<div class="s_body">
@@ -841,7 +854,7 @@ if ($patch == "2.45") {
 			</ul>
 			</div>
 		</div>
-		
+
 		<div class="s_paragraph">
 			<h4>Lua changes</h4>
 			<div class="s_body">
@@ -1988,7 +2001,7 @@ elseif ($patch == "2.3") {
 				<ul>
 					<li>Fixed security getting broken and out of sync</li>
 				</ul>
-				</li> 
+				</li>
 				<li><b>Aardvark</b>
 				<ul>
 					<li>Security timer shorter</li>
@@ -2149,9 +2162,9 @@ if ($patch == "2.2") {
 				<ul>
 					<li>AC has dual-cone system, one cone at 0.06, one at 0.12</li>
 					<li>HW AC damage up from 6.5 to 8.2</li>
-					<li>HW AC uses half ammo than before</li> 
-					<li>AC has 200 ammo rather than 300</li> 
-					<li>AC cooldown time reduced from 0.4 to 0.1 seconds</li> 
+					<li>HW AC uses half ammo than before</li>
+					<li>AC has 200 ammo rather than 300</li>
+					<li>AC cooldown time reduced from 0.4 to 0.1 seconds</li>
 					<li>AC has a little bullet push</li>
 				</ul>
 				</li>
@@ -2200,7 +2213,7 @@ if ($patch == "2.2") {
 					<li>Engineers and demomen limited to 2, removed defender detpacks</li>
 					<li>Objective icon fixed</li>
 				</ul>
-				</li> 
+				</li>
 				<li><b>Waterpolo</b>
 				<ul>
 					<li>Objective icons added</li>
@@ -2394,9 +2407,9 @@ elseif ($patch == "2.1") {
 				<ul>
 					<li>New HW AC System! : Dynamic cone and rate of fire removed</li>
 					<li>Clamp removed</li>
-					<li>AC bulletdamage down to 6.5 from 12</li> 
-					<li>AC spread set to .06 from (.05->.26)</li> 
-					<li>AC cycletime set to .08 from (.05->.15)</li> 
+					<li>AC bulletdamage down to 6.5 from 12</li>
+					<li>AC spread set to .06 from (.05->.26)</li>
+					<li>AC cycletime set to .08 from (.05->.15)</li>
 				</ul>
 				</li>
 				<li><b>Pyro:</b>
@@ -2461,7 +2474,7 @@ elseif ($patch == "2.1") {
 				<ul>
 					<li>Added anticitizen - Attack and Defend map</li>
 				</ul>
-				</li> 
+				</li>
 				<li><b>Tiger</b>
 				<ul>
 					<li>Added tiger - control point map</li>
@@ -2781,7 +2794,7 @@ elseif ($patch == "2.0") {
 				<ul>
 					<li>Dustbowl now compiles properly, various visual fixes (gaps in ceilings etc)</li>
 				</ul>
-				</li> 
+				</li>
 				<li><b>Epicenter:</b>
 				<ul>
 					<li>New scoring system, capping flag results in that teams flag being reset back to cage, other team unaffected and can continue capturing. First to 3 captures wins and everyone resets.</li>
@@ -2894,7 +2907,7 @@ elseif ($patch == "2.0") {
 			</ul>
 			</div>
 		</div>
-		
+
 		<div class="s_paragraph">
 			<h4>Spawn Weapon Cvars</h4>
 			<div class="s_body">
@@ -2915,7 +2928,7 @@ elseif ($patch == "2.0") {
 				</ul>
 			</div>
 		</div>
-		
+
 		<div class="s_paragraph">
 			<h4>New Chat Macros</h4>
 			<div class="s_body">
@@ -2957,7 +2970,7 @@ elseif ($patch == "2.0") {
 				</ul>
 			</div>
 		</div>
-		
+
 	</div>
 </div>
 
