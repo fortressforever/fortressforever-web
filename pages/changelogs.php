@@ -55,6 +55,16 @@ foreach ($pre_greenlight_patches as $pre_greenlight_patch)
 if ($patch == "2.7.x") {
 ?>
 <div class="c_table">
+	<h3 class="no-margin">Patch 2.7.7</h3>
+	<div class="t_subheader">Released September 4, 2018</div>
+	<div class="t_body">
+		<ul class="task-list">
+			<li>Fixed ff_restartround and other events not being relayed to SourceTV (fixes things like restartround not resetting Lua HUD elements in SourceTV demos, SGs getting killed not showing up in SourceTV demos, Lua-based objective death notices not showing up in SourceTV demos, etc)</li>
+			<li>Added hud_lua convar to control Lua HUD elements being drawn</li>
+			<li>Stop hud_keystate being drawn when in spec freecam</li>
+		</ul>
+	</div>
+
 	<h3 class="no-margin">Patch 2.7.6</h3>
 	<div class="t_subheader">Released February 20, 2018</div>
 	<div class="t_body">
