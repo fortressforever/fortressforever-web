@@ -55,6 +55,16 @@ foreach ($pre_greenlight_patches as $pre_greenlight_patch)
 if ($patch == "2.7.x") {
 ?>
 <div class="c_table">
+	<h3 class="no-margin">Patch 2.7.8</h3>
+	<div class="t_subheader">Released January 27, 2019</div>
+	<div class="t_body">
+		<ul class="task-list">
+			<li>Fixed some inconsistencies with how friendly fire interacts with sabotaged buildables</li>
+			<li>Removed the -1 frag recieved from suicides</li>
+			<li>The top damager of a player that kills themselves now gets an assist (shown in death notices as &lt;icon&gt; suicider + assister)</li>
+		</ul>
+	</div>
+
 	<h3 class="no-margin">Patch 2.7.7</h3>
 	<div class="t_subheader">Released September 4, 2018</div>
 	<div class="t_body">
