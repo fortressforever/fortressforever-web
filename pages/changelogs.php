@@ -55,6 +55,14 @@ foreach ($pre_greenlight_patches as $pre_greenlight_patch)
 if ($patch == "2.7.x") {
 ?>
 <div class="c_table">
+	<h3 class="no-margin">Patch 2.7.10</h3>
+	<div class="t_subheader">Released July 7, 2019</div>
+	<div class="t_body">
+		<ul class="task-list">
+			<li>Fixed last grenade not being throwable</li>
+		</ul>
+	</div>
+
 	<h3 class="no-margin">Patch 2.7.9</h3>
 	<div class="t_subheader">Released July 3, 2019</div>
 	<div class="t_body">
