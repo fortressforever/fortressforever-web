@@ -11,7 +11,8 @@ else
 	define( 'FF_IS_LOCAL', false );
 }
 define( 'FF_URI', FF_URI_BASE );
-define( 'FF_DOMAIN', "http://".$_SERVER["SERVER_NAME"] );
+$isHTTPS = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on';
+define( 'FF_DOMAIN', ($isHTTPS ? "https" : "http")."://".$_SERVER["SERVER_NAME"] );
 define( 'FF_HOST_BASE', FF_DOMAIN.FF_URI_BASE );
 define( 'FF_HOST', FF_DOMAIN.FF_URI );
 

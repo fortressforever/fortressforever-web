@@ -19,7 +19,7 @@ $DB = $config["site_db"];
 	<!-- Optimized mobile viewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link href='http://fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
 	<link href="css/style.css" rel="stylesheet" />
 	<link rel="alternate" type="application/rss+xml" href="<?=GetLink("rss")?>" />
 </head>
